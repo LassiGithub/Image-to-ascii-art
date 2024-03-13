@@ -19,7 +19,12 @@ public class ImageProcesser {
         BufferedImage img = null;
         try {
             img = ImageIO.read(new File(filePath));
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
+            System.out.println("Something went wrong with reading the image file");
+            System.out.println("Error:");
+            System.out.println(e);
+            return null;
         }
 
         // Convert into a value array
